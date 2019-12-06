@@ -14,3 +14,10 @@ Go to the directory smart_greenhouse_monitoring_system. Run the command :
 This loads the npm modules required for the project. Then execute the command :
 
 `npm start`
+
+#### Starting django server
+Navigate to the Django project directory. Run the following command in the command line :
+
+`python manage.py runserver`
+
+##### Note : Run the django server on the default port (8000)
