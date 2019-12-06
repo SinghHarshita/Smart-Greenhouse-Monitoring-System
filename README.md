@@ -8,4 +8,9 @@ This is the sql file for the database. Import this in MySQL for the database
 
 #### Running the website
 Go to the directory smart_greenhouse_monitoring_system. Run the command :
+
+`npm install`
+
+This loads the npm modules required for the project. Then execute the command :
+
 `npm start`
