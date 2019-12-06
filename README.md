@@ -1,4 +1,4 @@
-# Smart-Greenhouse-Monitoring-System
+# Smart Greenhouse Monitoring System
 
 ### smart_greenhouse.pdf
 Contains the schema descriptions of relations in the database.
