@@ -1,0 +1,326 @@
+/*=======================
+    Banner Area 
+========================*/
+
+
+.slider-area {
+    height: 1196px;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+
+    @media #{$lg-layout} {
+        height: 780px;
+    }
+
+    @media #{$md-layout} {
+        height: auto;
+        padding: 150px 0;
+        padding-bottom: 58px;
+    }
+
+    @media #{$sm-layout} {
+        height: auto;
+        padding: 150px 0;
+        padding-bottom: 58px;
+    }
+
+    &.bg-shape{
+        &::before{
+            background-image: url(/assets/images/app/shape.png);
+            background-repeat: no-repeat;
+            background-position: left top;
+            background-size: cover;
+            content: "";
+            height: 460px;
+            left: 0;
+            position: absolute;
+            width: 100%;
+            z-index: 2;
+            bottom: 0px;
+            right: 0;
+            top: auto;
+            -webkit-transform: rotate(180deg);
+            -ms-transform: rotate(180deg);
+            transform: rotate(180deg);
+            @media #{$lg-layout} {
+                height: 283px;
+            }
+            @media #{$md-layout} {
+                background-image: inherit;
+                height: auto;
+            }
+            @media #{$sm-layout} {
+                background-image: inherit;
+                height: auto;
+            }
+        }
+    }
+    
+    &.horizontal{
+        height: 1075px;
+        @media #{$md-layout} {
+            height: auto;
+        }
+        @media #{$sm-layout} {
+            height: auto;
+        }
+        &.bg-shape {
+            &::before {
+                height: 212px;
+                background-color: #ffffff;
+                background-image: inherit;
+                
+                @media #{$lg-layout} {
+                    height: auto;
+                }
+                @media #{$md-layout} {
+                    height: auto;
+                }
+                @media #{$sm-layout} {
+                    height: auto;
+                }
+            }
+        }
+    }
+    .row{
+        height: 100%;
+    }
+    .banner-text {
+        height: 100%;
+        display: table;
+        .banner-table-cell {
+            display: table-cell;
+            vertical-align: middle;
+            z-index: 9;
+            position: relative;
+            h1 {
+                font-size: 65px;
+                font-weight: 800;
+                line-height: 72px;
+                margin-bottom: 23px;
+                text-transform: uppercase;
+                color: #ffffff;
+
+                @media #{$lg-layout} {
+                    font-size: 50px;
+                    line-height: 58px;
+                    margin-bottom: 10px;
+                    br{
+                        display: none;
+                    }
+                }
+
+                @media #{$md-layout} {
+                    br{
+                        display: none;
+                    }
+                }
+                @media #{$sm-layout} {
+                    font-size: 46px;
+                    margin-bottom: 11px;
+                    br{
+                        display: none;
+                    }
+                }
+            }
+            p{
+                color: #ffffff;
+                margin-bottom: 33px;
+            }
+            .banner-buttons {
+                .button-default {
+                    margin-right: 26px;
+                    @media #{$sm-layout} {
+                        margin-bottom: 20px;
+                    } 
+                }
+            }
+        }
+    }
+}
+
+
+
+/*==================
+    Horizontal 
+===================*/
+
+.slider-area.horizontal .banner-apps .single-app:nth-child(1){
+    top: 30px;
+}
+.slider-area.horizontal .banner-apps .single-app:nth-child(2){
+    top: 30px;
+}
+.slider-area.horizontal .banner-apps .single-app:nth-child(3){
+    top: 30px;
+}
+
+
+/*====================
+    Banner Images 
+=====================*/
+.banner-product-image{
+    margin-top: 66%;
+    position: relative;
+    z-index: 9;
+
+    @media #{$md-layout} {
+        margin-top: 156px;
+        text-align: center !important;
+    }
+
+    @media #{$sm-layout} {
+        margin-top: 156px;
+        text-align: center !important;
+    }
+
+}
+
+
+/*====================
+    Banner Apps 
+=====================*/
+
+.banner-apps{
+    margin-left: 76px;
+    margin-top: -315px;
+    position: relative;
+
+    @media #{$md-layout} {
+        margin-left: 0;
+        margin-top: 37px;
+    }
+
+    @media #{$sm-layout} {
+        margin-left: 0;
+        margin-top: 37px;
+    }
+
+    .single-app {
+        height: 140px;
+        width: 140px;
+        border: 4px solid #ffffff;
+        border-radius: 100%;
+        background: #7a9757 none repeat scroll 0 0;
+        text-align: center;
+        transition: all 0.3s ease 0s;
+        z-index: 99;
+        position: absolute;
+        display: inline-table;
+
+        @media #{$lg-layout} {
+            height: 100px;
+            width: 100px;
+            border: 3px solid #ffffff;
+        }
+        @media #{$md-layout} {
+            height: 100px;
+            width: 100px;
+            border: 3px solid #ffffff;
+        }
+        @media #{$sm-layout} {
+            height: 100px;
+            width: 100px;
+            border: 3px solid #ffffff;
+        }
+
+        .single-app-table-cell{
+            display: table-cell;
+            vertical-align: middle;
+        }
+
+        i{
+            color: #ffffff;
+            font-size: 35px;
+            margin-bottom: 2px;
+        }
+        h4{
+            font-size: 16px;
+            color: #ffffff;
+            font-weight: 700;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            @media #{$lg-layout} {
+                font-size: 11px;
+            }
+            @media #{$md-layout} {
+                font-size: 11px;
+            }
+            @media #{$sm-layout} {
+                font-size: 11px;
+            }
+        }
+        h3{
+            font-size: 18px;
+            color: #ffffff;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+
+            @media #{$lg-layout} {
+                font-size: 14px;
+            }
+            @media #{$md-layout} {
+                font-size: 14px;
+            }
+            @media #{$sm-layout} {
+                font-size: 14px;
+            }
+        }
+        &:nth-child(1){
+            left: 0;
+            top: 122px;
+
+            @media #{$lg-layout} {
+                top: 183px;
+            }
+            @media #{$md-layout} {
+                top: 100%;
+            }
+            @media #{$sm-layout} {
+                top: 100%;
+            }
+        }
+        &:nth-child(2){
+            left: 258px;
+            top: 60px;
+
+            @media #{$lg-layout} {
+                left: 183px;
+                top: 127px;
+            }
+
+            @media #{$md-layout} {
+                top: 100%;
+            }
+            @media #{$sm-layout} {
+                top: 100%;
+                left: 139px;
+            }
+        }
+
+        &:nth-child(3){
+            left: 516px;
+            top: 0;
+            @media #{$lg-layout} {
+                left: 366px;
+                top: 87px;
+            }
+            @media #{$md-layout} {
+                top: 100%;
+            }
+            @media #{$sm-layout} {
+                top: 100%;
+                left: 266px;
+            }
+            @media #{$small-mobile} {
+                display: none;
+            }
+        }
+    }
+}
+
+
+

@@ -1,0 +1,33 @@
+/*=============================
+    Screenshot 
+===============================*/
+
+.screenshots-area {
+    padding-top: 117px
+}
+.sin-screenshot {
+    z-index: 9
+}
+.sin-screenshot a {
+    display: block;
+    position: relative
+}
+.sin-screenshot a:before {
+    background: #24141e none repeat scroll 0 0;
+    bottom: 0;
+    content: "";
+    left: 0;
+    opacity: 0.6;
+    filter: alpha(opacity=60);
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.sin-screenshot a:hover:before {
+    opacity: 0.2;
+    filter: alpha(opacity=20)
+}
+#screenshot-carousel {
+    z-index: 9;
+}
+

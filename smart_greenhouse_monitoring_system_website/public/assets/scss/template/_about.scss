@@ -1,0 +1,62 @@
+/*====================
+    About Area 
+======================*/
+
+.about-content{
+    .title {
+        font-size: 28px;
+        font-weight: 800;
+        margin-bottom: 19px;
+    }
+    p {    
+        margin-bottom: 25px;
+    }
+    .about-buttons {
+        margin-top: 48px;
+        button {
+            margin-right: 26px;
+            @media #{$sm-layout} {
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+
+
+.app-about{
+    &.horizontal-about{
+        padding-bottom: 100px;
+        @media #{$lg-layout} {
+            padding-top: 100px;
+        }
+        @media #{$md-layout} {
+            padding-bottom: 80px;
+            padding-top: 80px;
+        }
+        @media #{$sm-layout} {
+            padding-bottom: 80px;
+            padding-top: 80px;
+        }
+    }
+    
+    @media #{$lg-layout} {
+        padding-bottom: 80px;
+    }
+
+    @media #{$md-layout} {
+        padding-bottom: 80px;
+        padding-top: 80px;
+    }
+
+    @media #{$sm-layout} {
+        padding-bottom: 80px;
+        padding-top: 80px;
+    }
+
+}
+
+
+
+
+
+

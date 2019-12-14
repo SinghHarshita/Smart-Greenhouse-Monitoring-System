@@ -1,0 +1,43 @@
+/*=====================
+    Section Title 
+=======================*/
+
+.section-title{
+    h2{
+        font-size: 36px;
+        font-weight: 800;
+        line-height: 33px;
+        text-transform: uppercase;
+        @media #{$sm-layout} {
+            font-size: 27px;
+        }
+    }
+    img{
+        margin-bottom: 24px;
+    }
+    p{
+        padding: 0 27%;
+
+        @media #{$lg-layout} {
+            padding: 0 19%;
+        }
+        @media #{$md-layout} {
+            padding: 0 9%;
+        }
+        @media #{$sm-layout} {
+            padding: 0 5%;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,46 @@
+/*==================
+    Button Area 
+=====================*/
+
+.button-default{
+    background: #ffffff none repeat scroll 0 0;
+    border: 0 none;
+    color: #2d3e50;
+    display: inline-block;
+    font-family: "Raleway",sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 53px;
+    padding: 0 31px;
+    text-transform: uppercase;
+    border-radius: 2px;
+    -webkit-transition: all 0.5s ease 0s;
+    transition: all 0.5s ease 0s;
+
+    &:hover {
+        background-color: $theme-color;
+        color: #ffffff;
+    }
+    &.button-olive{
+        background-color: $theme-color;
+        color: #ffffff;
+        &:hover{
+            background: #ffffff none repeat scroll 0 0;
+            color: #2d3e50;
+        }
+    }
+    
+    &.button-border{
+        border: 1px solid #7a9757;
+    }
+}
+
+
+
+
+
+
+
+
+
+

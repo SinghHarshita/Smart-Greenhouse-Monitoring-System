@@ -1,0 +1,168 @@
+/*--------------------------------------------*/
+/*  9. Testimonial Area
+/*--------------------------------------------*/
+.testimonial-area {
+    padding-top: 127px
+}
+
+.testimonial-image-slider {
+    margin-top: 5px
+}
+
+.slick-list {
+    margin: 0 5px
+}
+
+.sin-testiImage {
+    display: inline-block;
+    margin-bottom: 11px;
+    outline: medium none;
+}
+
+.sin-testiImage img {
+    border: 1px solid #7a9757;
+    border-radius: 50%;
+    cursor: pointer;
+    display: inline-block !important;
+    height: 97px;
+    margin-bottom: 30px;
+    margin-top: 36px;
+    outline: 0 none;
+    width: 97px;
+}
+
+.slick-current .sin-testiImage img {
+    height: 170px;
+    margin-top: 0;
+    opacity: 1;
+    filter: alpha(opacity=100);
+    width: 170px;
+    border: 3px solid #7a9757;
+}
+
+.slick-initialized .slick-slide {
+    z-index: 1 !important;
+}
+
+.testimonial-text-slider h2 {
+    display: block;
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 24px;
+    margin-bottom: 1px;
+    text-transform: uppercase;
+}
+
+.testimonial-text-slider {
+    background: #f0f0f0 none repeat scroll 0 0;
+    border-radius: 7px;
+    margin: auto;
+    padding: 30px 55px 4px;
+    position: relative;
+    width: 71%;
+    z-index: 9;
+
+    @media #{$md-layout} {
+        padding: 30px 19px 4px;
+        width: 100%;
+    }
+
+    @media #{$sm-layout} {
+        padding: 30px 19px 4px;
+        width: 100%;
+    }
+}
+
+.testimonial-text-slider:after {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) #f0f0f0;
+    -webkit-border-image: none;
+    -o-border-image: none;
+    border-image: none;
+    border-style: solid;
+    border-width: 22px 13px;
+    content: "";
+    height: 0;
+    left: 50%;
+    margin-left: -13px;
+    position: absolute;
+    top: -44px;
+    width: 0;
+}
+
+.sin-testiText {
+    outline: none
+}
+
+.sin-testiText p {
+    margin-bottom: 32px
+}
+
+.client-rating {
+    margin-bottom: 5px
+}
+
+.client-rating i {
+    color: #7d7d7d;
+    font-size: 18px;
+}
+
+.client-rating i.color {
+    color: #f1c30d
+}
+
+.slick-prev,
+.slick-next {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    border: medium none;
+    color: rgba(0, 0, 0, 0);
+    cursor: pointer;
+    display: block;
+    font-size: 0;
+    height: 25px;
+    outline: medium none;
+    padding: 0;
+    position: absolute;
+    top: 34.6%;
+    width: 16px;
+}
+
+.slick-prev {
+    left: -31px
+}
+
+.slick-next {
+    right: -31px
+}
+
+.slick-prev:before,
+.slick-next:before {
+    height: 25px;
+    width: 16px;
+    left: 0;
+    top: 0;
+    position: absolute;
+    color: #2d3e50;
+    content: "\f2fa";
+    font-family: "Material-Design-Iconic-Font";
+    font-size: 50px !important;
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s
+}
+
+.slick-prev:hover:before,
+.slick-next:hover:before {
+    color: #7a9757
+}
+
+.slick-next:before {
+    right: 0;
+    content: "\f2fb";
+}
+
+
+
+

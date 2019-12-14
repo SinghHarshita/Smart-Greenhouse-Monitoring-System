@@ -1,0 +1,128 @@
+/*============================
+    Template Color Variation 
+==============================*/
+
+@for $i from 1 through length($colorList) {
+    .template-color-#{$i} {
+        .theme-color {
+            color: nth($colorList, $i);
+        }
+    }
+}
+
+
+
+
+
+
+@keyframes ring-rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.color-1 {
+    background: $theme-color;
+}
+
+.color-2 {
+    background: $theme-color-2;
+}
+
+.color-3 {
+    background: $theme-color-3;
+}
+
+.color-picker {
+    position: fixed;
+    right: -190px;
+    top: 200px;
+    width: 190px;
+    z-index: 9;
+    transition: all .3s ease;
+    .settings-header {
+        background: linear-gradient($theme-color, $theme-color);
+        padding: 5px 15px;
+        h3 {
+            color: $white;
+            margin: 0;
+            font-size: 20px;
+            padding: 4px 9px;
+        }
+    }
+}
+
+.color-picker a.handle {
+    position: absolute;
+    right: 190px;
+    width: 50px;
+    height: 49px;
+    color: #fff;
+    transition: all .3s ease-in;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    z-index: -1;
+    border-radius: 50%;
+    text-decoration: none;
+    top: -80px;
+    border: 1px solid #fff;
+}
+
+.handle i {
+    animation: ring-rotate 3s infinite linear;
+}
+.sec-position {
+    position: relative;
+    top: -80px;
+}
+.color-picker .section {
+    background: #fff;
+    padding: 20px;
+    overflow: auto;
+}
+.color-picker .colors a {
+    width: 35px;
+    height: 35px;
+    margin: 0 7px;
+    float: left;
+    transition: all .3s ease-in;
+}
+
+/*=========================
+    Thumbnail Color 
+===========================*/
+
+.color-picker a.handle {
+    background: $theme-color;
+}
+.color-picker .section {
+    border: 1px solid $theme-color;
+}
+
+.logo a img.logo-2 ,
+.logo a img.logo-3 ,
+.banner-product-image .image-2 ,
+.banner-product-image .image-3 ,
+.section-title .image-2 ,
+.section-title .image-3 ,
+.about-thumbnail .image-2,
+.about-thumbnail .image-3 ,
+
+.screenshot-carousel .image-2,
+.screenshot-carousel .image-3 {
+    display: none;
+}
+
+
+
+
+
+
+
+

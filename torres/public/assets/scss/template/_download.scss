@@ -1,0 +1,174 @@
+/*=====================
+    Download Area 
+=======================*/
+
+
+.download-area{
+    position: relative;
+    margin-top: -197px;
+    padding-bottom: 408px;
+    padding-top: 358px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-top: -166px;
+    padding-bottom: 348px;
+    padding-top: 319px;
+    position: relative;
+    z-index: 2;
+    background-image: url(/assets/images/bg/bg-image-1.jpg);
+    
+    @media #{$lg-layout} {
+        margin-top: -347px;
+        padding-bottom: 308px;
+        padding-top: 436px;
+    }
+    @media #{$md-layout} {
+        transform: rotate(0deg);
+        background-image: inherit;
+        margin-top: 0;
+        padding-bottom: 100px;
+        padding-top: 100px;
+    }
+    @media #{$sm-layout} {
+        transform: rotate(0deg);
+        background-image: inherit;
+        margin-top: 0;
+        padding-bottom: 100px;
+        padding-top: 100px;
+    }
+
+    .bg-overlay{
+        background: rgba(45, 62, 80, 0.85) none repeat scroll 0 0;
+        content: "";
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: -1;
+    }
+
+    
+    &::before{
+        background-image: url(/assets/images/app/shape-2.png);
+        background-repeat: no-repeat;
+        background-position: left top;
+        background-size: cover;
+        content: "";
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: 2;
+    }
+    &::after{
+        background-image: url(/assets/images/app/shape-3.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        content: "";
+        right: 0;
+        position: absolute;
+        bottom: -1px;
+        width: 100%;
+        z-index: 1;
+        -webkit-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        transform: rotate(180deg);
+    }
+    &::before,
+    &::after {
+        height: 460px;
+        
+        @media #{$md-layout} {
+            height: auto;
+        }
+
+        @media #{$sm-layout} {
+            height: auto;
+        }
+    }
+
+    &.horizontal {
+        margin-top: 0;
+        padding-bottom: 100px;
+        padding-top: 100px;
+        position: relative;
+        z-index: 2;
+        background-image: url(/assets/images/bg/bg-image-1.jpg);
+        margin-bottom: 77px;
+        &::before ,
+        &::after {
+            height: auto;
+        }
+        &::before{
+            background-image: inherit;
+        }
+        &::after{
+            transform: rotate(0deg);
+            background-image: inherit;
+        }
+
+        @media #{$sm-layout} {
+            margin-bottom: 0;
+        }
+    }
+}
+
+
+
+
+.download-buttons {
+    text-align: center;
+    .download-btn {
+        background-color: rgba(0, 0, 0, 0);
+        border: 1px solid #ffffff;
+        border-radius: 2px;
+        height: 78px;
+        margin: 0 21px;
+        padding: 0 29px 0 87px;
+        position: relative;
+        -webkit-transition: all 0.3s ease 0s;
+        transition: all 0.3s ease 0s;
+        display: inline-block;
+        margin-bottom: 20px;
+
+        i {
+            color: #ffffff;
+            float: left;
+            font-size: 50px;
+            left: 22px;
+            position: absolute;
+            width: 53px;
+        }
+        span {
+            color: #ffffff;
+            display: block;
+            font-family: $heading-font;
+            font-size: 18px;
+            line-height: 26px;
+            text-align: left;
+
+            @media #{$sm-layout} {
+                font-size: 13px;
+            }
+            
+            span {
+                &.large-text {
+                    display: block !important;
+                    font-weight: 700;
+                    font-size: 26px;
+                    position: relative;
+                    top: -4px;
+                    color: #ffffff;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+

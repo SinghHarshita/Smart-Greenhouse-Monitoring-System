@@ -1,0 +1,982 @@
+/*=============================================
+=            landing page            =
+=============================================*/
+
+
+.landing-page-wrapper {
+
+    .landing-hero-bg {
+        background-image: url("/assets/images/landing/hero-bg.jpg");
+    }
+    .header-section {
+        .logo {
+            padding-right: 0;
+            flex-basis: auto;
+            a {
+                img {
+                    //max-width: 100%;
+                    @media #{$small-mobile} {
+                        max-width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    
+
+    /*************************
+      1.General
+    *************************/
+
+    /*-- Common Classes --*/
+    .fix {
+        overflow: hidden
+    }
+
+    .float-left {
+        float: left;
+    }
+
+    .float-right {
+        float: right;
+    }
+
+    /*-- Section --*/
+    .section {
+        float: left;
+        position: relative;
+        width: 100%;
+    }
+
+    /*-- Background Color --*/
+    .bg-gray {
+        background-color: #f6f6f6;
+    }
+
+    .bg-dark {
+        background-color: #1a1a1a;
+    }
+
+    .bg-light-dark {
+        background-color: #232323;
+    }
+
+    /*-- Button --*/
+    .btn {
+        background-color: transparent;
+        border-radius: 0;
+        color: inherit;
+        font-size: 12px;
+        font-weight: 700;
+        height: 43px;
+        letter-spacing: 0.4px;
+        line-height: 23px;
+        overflow: hidden;
+        padding: 9px 50px;
+        position: relative;
+        text-transform: uppercase;
+        z-index: 1;
+    }
+
+    .btn::before {
+        -webkit-animation: 0.3s linear 0s normal forwards 1 running btnAnimationOut;
+        animation: 0.3s linear 0s normal forwards 1 running btnAnimationOut;
+        background-color: inherit;
+        content: "";
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        -webkit-transform: scaleY(0.02);
+        -ms-transform: scaleY(0.02);
+        transform: scaleY(0.02);
+        width: 21px;
+        z-index: -1;
+    }
+
+    /*-- Button Animation --*/
+    @-webkit-keyframes btnAnimationOut {
+        0% {
+            -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+            width: 100%;
+        }
+
+        50% {
+            -webkit-transform: scaleY(0.02);
+            transform: scaleY(0.02);
+            width: 100%;
+        }
+
+        100% {
+            -webkit-transform: scaleY(0.02);
+            transform: scaleY(0.02);
+        }
+    }
+
+    @keyframes btnAnimationOut {
+        0% {
+            -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+            width: 100%;
+        }
+
+        50% {
+            -webkit-transform: scaleY(0.02);
+            transform: scaleY(0.02);
+            width: 100%;
+        }
+
+        100% {
+            -webkit-transform: scaleY(0.02);
+            transform: scaleY(0.02);
+        }
+    }
+
+    /*-- Button Hover --*/
+    .btn:hover {
+        -webkit-transition: all 0.3s ease 0.3s;
+        -o-transition: all 0.3s ease 0.3s;
+        transition: all 0.3s ease 0.3s;
+    }
+
+    .btn:hover::before {
+        -webkit-animation: 0.5s linear 0s normal forwards 1 running btnAnimationIn;
+        animation: 0.5s linear 0s normal forwards 1 running btnAnimationIn;
+    }
+
+    /*-- Button Hover Animation --*/
+    @-webkit-keyframes btnAnimationIn {
+        0% {
+            -webkit-transform: scaleY(0.02);
+            transform: scaleY(0.02);
+        }
+
+        50% {
+            -webkit-transform: scaleY(0.02);
+            transform: scaleY(0.02);
+            width: 100%;
+        }
+
+        100% {
+            -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+            width: 100%;
+        }
+    }
+
+    @keyframes btnAnimationIn {
+        0% {
+            -webkit-transform: scaleY(0.02);
+            transform: scaleY(0.02);
+        }
+
+        50% {
+            -webkit-transform: scaleY(0.02);
+            transform: scaleY(0.02);
+            width: 100%;
+        }
+
+        100% {
+            -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+            width: 100%;
+        }
+    }
+
+    /*-- Button White --*/
+    .btn.white {
+        border: 1px solid #fff;
+        color: #fff;
+    }
+
+    .btn.white:hover {
+        color: $theme-color;
+    }
+
+    .btn.white::before {
+        background-color: #fff;
+    }
+
+    /*-- Button black --*/
+    .btn.black {
+        border: 1px solid #232323;
+        color: #232323;
+    }
+
+    .btn.black:hover {
+        color: #ffffff;
+    }
+
+    .btn.black::before {
+        background-color: #232323;
+    }
+
+    /*-- Button Color --*/
+    .btn.color {
+        border: 1px solid $theme-color;
+        color: $theme-color;
+    }
+
+    .btn.color:hover {
+        color: #ffffff;
+    }
+
+    .btn.color::before {
+        background-color: $theme-color;
+    }
+
+    /*-- Section Title --*/
+
+    .section-title h1 {
+        color: #373737;
+        display: block;
+        font-weight: 500;
+        line-height: 28px;
+        margin: 0;
+        position: relative;
+        text-transform: capitalize;
+        z-index: 1;
+    }
+
+    .section-title.white h1 {
+        color: #ffffff;
+    }
+
+    .section-title h1 span {
+        color: $theme-color;
+    }
+
+    .section-title p {
+        color: #5b5b5b;
+        display: inline-block;
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 30px;
+        margin-bottom: 0;
+        margin-top: 30px;
+        max-width: 775px;
+    }
+
+    .section-title.white p {
+        color: #ffffff;
+    }
+
+    /*-- Section Title 2 --*/
+    .section-title-2 {
+        z-index: 1;
+    }
+
+    .section-title-2::before {
+        color: #2b2b2b;
+        content: attr(data-title);
+        font-size: 150px;
+        font-weight: 800;
+        left: 15px;
+        line-height: 110px;
+        position: absolute;
+        right: 15px;
+        text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        text-transform: uppercase;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+        z-index: -1;
+    }
+
+    .section-title-2 h1 {
+        color: #ffffff;
+        display: block;
+        font-size: 40px;
+        font-weight: 800;
+        line-height: 28px;
+        margin: 0;
+        position: relative;
+        text-transform: uppercase;
+        z-index: 1;
+    }
+
+    .section-title-2 p {
+        color: #d7d7d7;
+        display: inline-block;
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 30px;
+        margin-bottom: 0;
+        margin-top: 33px;
+        max-width: 775px;
+    }
+
+    /*-- Section Title 3 --*/
+    .section-title-3 {
+        z-index: 1;
+    }
+
+    .section-title-3 h1 {
+        color: #373737;
+        display: block;
+        font-size: 32px;
+        font-weight: 800;
+        line-height: 23px;
+        margin: 0;
+        position: relative;
+        text-transform: uppercase;
+        z-index: 1;
+    }
+
+    .section-title-3.white h1 {
+        color: #ffffff;
+    }
+
+    .section-title-3 h1 span {
+        color: $theme-color;
+    }
+
+    .section-title-3 p {
+        color: #6b6b6b;
+        display: inline-block;
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 25px;
+        margin-bottom: 0;
+        margin-top: 30px;
+        max-width: 520px;
+    }
+
+    .section-title-3.white p {
+        color: #ffffff;
+    }
+
+    /*-- Overlay --*/
+    .overlay {
+        background-attachment: fixed;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        z-index: 1;
+    }
+
+    .overlay::before {
+        background-color: #000;
+        bottom: 0;
+        content: "";
+        left: 0;
+        opacity: 0.7;
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: -1;
+    }
+
+    .overlay-dark::before {
+        background-color: #000000;
+        opacity: 0.9;
+    }
+
+    .overlay-gradient::before {
+        background: #2d3e50;
+        background: -webkit-gradient(left top, left bottom, color-stop(0%, #2d3e50), color-stop(100%, $theme-color));
+        background: -webkit-gradient(left top, left bottom, color-stop(0%, #2d3e50), color-stop(100%, $theme-color));
+        background: -webkit-linear-gradient(top, #2d3e50 0%, $theme-color 100%);
+        background: -o-linear-gradient(top, #2d3e50 0%, $theme-color 100%);
+        background: -webkit-gradient(linear, left top, left bottom, from(#2d3e50), to($theme-color));
+        background: linear-gradient(to bottom, #2d3e50 0%, $theme-color 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#2d3e50', endColorstr='$theme-color', GradientType=0);
+        opacity: 0.9;
+    }
+
+    /*-- Page Banner Section --*/
+    .page-banner-section {
+        padding: 250px 0;
+    }
+
+    .page-banner-content h1 {
+        color: #ffffff;
+        font-size: 40px;
+        font-weight: 500;
+        margin: 0;
+        text-transform: capitalize;
+
+    }
+
+    /*-- Pagination --*/
+    .pagination {
+        display: block;
+        margin: 20px 0 0;
+        text-align: center;
+    }
+
+    .pagination ul {
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    .pagination ul li {
+        display: block;
+        float: left;
+        margin: 0 5px;
+    }
+
+    .pagination ul li a {
+        border: 1px solid #acacac;
+        border-radius: 50%;
+        color: #6d6d6d;
+        display: block;
+        font-size: 12px;
+        font-weight: 300;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        width: 30px;
+    }
+
+    .pagination ul li a i {
+        display: block;
+        font-size: 18px;
+        line-height: 30px;
+    }
+
+    .pagination ul li a:hover,
+    .pagination ul li.active a {
+        border: 1px solid $theme-color;
+        color: $theme-color;
+    }
+
+    /*-- Scroll Up --*/
+    #scrollUp {
+        background-color: transparent;
+        border: 2px solid #999;
+        border-radius: 50%;
+        bottom: 28px;
+        color: #999;
+        height: 40px;
+        position: fixed;
+        right: 30px;
+        text-align: center;
+        width: 40px;
+    }
+
+    #scrollUp i {
+        display: block;
+        font-size: 24px;
+        line-height: 35px;
+    }
+
+    #scrollUp:hover {
+        background-color: #3f3f3f;
+        color: #fff;
+    }
+
+    /*-- Main Wrapper --*/
+    .main-wrapper {
+        background-color: #fff;
+        margin-bottom: 278px;
+        z-index: 9;
+    }
+
+
+    /* -----------------------------------
+      02. Header Section
+    --------------------------------------*/
+    .header-section {
+        background-color: transparent;
+        left: 0;
+        position: absolute;
+        right: 0;
+        padding: 20px 0;
+        top: 0;
+        z-index: 999;
+    }
+
+    .header-section.stick {
+        -webkit-animation: 300ms ease-in-out 0s normal none 1 running fadeInDown;
+        animation: 300ms ease-in-out 0s normal none 1 running fadeInDown;
+        background-color: #ffffff;
+        -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
+        box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
+        position: fixed;
+        top: 0;
+    }
+
+    /*-- Logo --*/
+
+    .logo a .sticky-logo {
+        position: absolute;
+        left: 0;
+        top: 0;
+        opacity: 0;
+        padding-left: 15px;
+    }
+
+    .stick .logo a img {
+        opacity: 0;
+    }
+
+    .stick .logo a .sticky-logo {
+        opacity: 1;
+    }
+
+    .buy-btn {
+        border: 2px solid #ffffff;
+        border-radius: 50px;
+        color: #ffffff;
+        display: inline-block;
+        font-size: 13px;
+        font-weight: 500;
+        height: 40px;
+        line-height: 24px;
+        margin-top: 0;
+        padding: 6px 35px;
+        text-transform: uppercase;
+    }
+
+    .stick .buy-btn {
+        border: 2px solid $theme-color;
+        color: $theme-color;
+        margin-top: 3px;
+    }
+
+    .buy-btn:hover {
+        background-color: $theme-color;
+        border-color: $theme-color;
+        color: #ffffff;
+    }
+
+
+    .hero-section {
+        padding: 300px 0 250px;
+    }
+
+    .hero-content img {
+        margin-bottom: 30px;
+        width: 170px;
+    }
+
+    .hero-content h1 {
+        color: #fff;
+        font-weight: 500;
+        font-size: 50px;
+    }
+
+    .hero-content h1 strong {
+        font-size: 50px;
+        font-weight: 700;
+        margin-bottom: 30px;
+        display: block;
+    }
+
+    .hero-content h1 span {
+        display: block;
+        font-size: 44px;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        font-weight: 700;
+    }
+
+    .hero-content p {
+        color: #fff;
+        margin: 20px auto 0;
+        max-width: 650px;
+    }
+
+    .hero-content a {
+        margin-top: 40px;
+        display: inline-block;
+    }
+
+
+    .demo-item {
+        text-align: center;
+    }
+
+    .demo-item .image {
+        display: block;
+        position: relative;
+        transition: all 0.3s ease 0s;
+    }
+
+    .demo-item .image::after {
+        background-color: $theme-color;
+        content: "";
+        height: 100%;
+        left: 0;
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+
+    .demo-item:hover .image {
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+        transform: translateY(-10px);
+    }
+
+    .demo-item:hover .image::after {
+        opacity: 0.8;
+    }
+
+    .demo-item .image i {
+        border: 2px solid #fff;
+        border-radius: 50%;
+        color: #fff;
+        font-size: 20px;
+        height: 60px;
+        left: 50%;
+        line-height: 56px;
+        margin-left: -30px;
+        opacity: 0;
+        position: absolute;
+        top: 50%;
+        transition: all 0.3s ease 0s;
+        width: 60px;
+        z-index: 9;
+    }
+
+    .demo-item:hover .image i {
+        opacity: 1;
+        margin-top: -30px;
+    }
+
+    .demo-item .image i:hover {
+        border: 2px solid #ffffff;
+        background-color: #ffffff;
+        color: $theme-color;
+    }
+
+    .demo-item .image img {
+        width: 100%;
+    }
+
+    .demo-item .title {
+        font-size: 18px;
+        font-weight: 400;
+        margin: 30px 0 0;
+        text-transform: uppercase;
+    }
+
+    .demo-item .title a {
+        color: #3e3e3e;
+        display: block;
+        padding: 5px;
+    }
+
+    .demo-item .title a:hover {
+        color: $theme-color;
+    }
+
+    .single-feature .icon {
+        color: $theme-color;
+        margin-right: 20px;
+    }
+
+    .single-feature .icon i {
+        display: block;
+        font-size: 36px;
+    }
+
+    .single-feature .content h4 {
+        display: block;
+        font-size: 18px;
+        line-height: 13px;
+        padding-bottom: 2px;
+        text-transform: capitalize;
+    }
+
+    .single-feature .content p {
+        color: #666;
+        margin: 0;
+    }
+
+    .footer-section {
+        background-color: $theme-color;
+    }
+
+    .footer-section h1 {
+        color: #fff;
+        display: block;
+        float: left;
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+
+    .footer-section .buy-btn:hover {
+        color: $theme-color;
+        border-color: #ffffff;
+        background-color: #ffffff;
+    }
+
+
+    .also-like .demo-item .title {
+        font-size: 16px;
+        font-weight: 400;
+        margin: 22px 0 0;
+        text-transform: capitalize;
+    }
+
+
+
+    /*=============================================
+    =            custom style            =
+    =============================================*/
+
+    .buy-btn:hover {
+        background-color: $theme-color;
+        border-color: $theme-color;
+        color: #ffffff;
+    }
+
+    .header-section .buy-btn {
+        border-color: #ffffff;
+        background-color: #ffffff;
+        color: #000000;
+        font-weight: 600;
+    }
+
+    .header-section .buy-btn:hover {
+        border-color: $theme-color;
+        background-color: $theme-color;
+        color: #ffffff;
+    }
+
+    .stick.header-section .buy-btn {
+        border-color: #000000;
+        background-color: #000000;
+        color: #ffffff;
+    }
+
+    .stick.header-section .buy-btn:hover {
+        border-color: $theme-color;
+        background-color: $theme-color;
+        color: #ffffff;
+    }
+
+    .demo-item .image img {
+        border: 1px solid #f1f1f1;
+    }
+
+    .demo-item:hover .image {
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    .demo-item .image::after {
+        display: none;
+    }
+
+    .demo-item .image i {
+        display: none;
+    }
+
+    .stick .buy-btn {
+        border: 2px solid $theme-color;
+        color: $theme-color;
+    }
+
+    .single-feature .icon {
+        color: $theme-color;
+        width: 50px;
+    }
+
+    .single-feature .content h4 {
+        line-height: 1;
+    }
+
+    .footer-section {
+        background-color: #444;
+    }
+
+    .stick .buy-btn:hover {
+        color: #fff;
+    }
+
+    .demo-item .title a:hover {
+        color: $theme-color;
+    }
+
+    .demo-item .title {
+        text-transform: capitalize;
+        font-weight: 500;
+        margin-top: 20px;
+    }
+
+    .demo-item .title span {
+        font-size: 13px;
+    }
+
+    .footer-section .buy-btn:hover {
+        background-color: $theme-color;
+        border-color: $theme-color;
+        color: #ffffff;
+    }
+
+    .hero-content h1 {
+        text-transform: none;
+    }
+
+    .hero-content h1 strong {
+        text-transform: capitalize;
+    }
+
+    .logo a,
+    .stick .logo a {
+        width: auto;
+    }
+
+    @media only screen and (max-width: 767px) {
+        .footer-section .buy-btn {
+            float: left !important;
+        }
+    }
+
+
+
+
+    /*=====  End of landing page  ======*/
+
+
+
+    /*=============================================
+    =            responsive            =
+    =============================================*/
+
+    /* Large Screen  */
+
+    @media only screen and (min-width: 1400px) {}
+
+
+    /* Laptop Screen  */
+
+    @media only screen and (min-width: 1171px) and (max-width: 1400px) {}
+
+
+    /* desktop :992px. */
+
+    @media only screen and (min-width: 992px) and (max-width: 1169px) {
+        .single-feature .content p {
+            font-size: 14px;
+        }
+
+
+    }
+
+
+    /* Tablet :768px. */
+
+    @media only screen and (min-width: 768px) and (max-width: 991px) {
+        .hero-content h1 {
+            font-size: 30px;
+        }
+
+        .demo-content h1 {
+            font-size: 30px;
+        }
+
+        .demo-item .image i {
+            height: 50px;
+            line-height: 46px;
+            width: 50px;
+        }
+
+        .single-feature .content p {
+            font-size: 14px;
+        }
+
+        .footer-section h1 {
+            font-size: 24px;
+        }
+
+
+
+
+
+    }
+
+
+    /* Large Mobile :480px. */
+
+    @media only screen and (max-width: 767px) {
+
+        // .container {
+        //     width: 450px;
+        // }
+        .hero-section {
+            padding: 150px 0 100px;
+        }
+
+        .hero-content h1 {
+            font-size: 24px;
+        }
+
+        .hero-content h1 strong {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .hero-content a {
+            margin-top: 20px;
+        }
+
+        .demo-content h1 {
+            font-size: 30px;
+        }
+
+        .section-title h1 {
+            font-size: 30px;
+        }
+
+        .footer-section .buy-btn {
+            float: left;
+        }
+
+    }
+
+
+    /* small mobile :320px. */
+
+    @media only screen and (max-width: 479px) {
+
+        .buy-btn {
+            font-size: 11px;
+            height: 34px;
+            padding: 3px 25px;
+            margin-top: 0;
+        }
+
+        .hero-section {
+            padding: 150px 0 100px;
+        }
+
+        .hero-content h1 {
+            font-size: 14px;
+            line-height: 20px;
+        }
+
+        .hero-content h1 strong {
+            font-size: 30px;
+        }
+
+        .hero-content p {
+            font-size: 13px;
+        }
+
+        .hero-content a {
+            margin-top: 20px;
+        }
+    }
+}
+
+.landing-page-wrapper .section-title h1 {
+    color: #373737;
+    display: block;
+    font-weight: 500;
+    line-height: 28px;
+    margin: 0;
+    position: relative;
+    text-transform: capitalize;
+    z-index: 1;
+    font-size: 39px !important;
+}
+
+/*=====  End of responsive  ======*/

@@ -1,0 +1,60 @@
+/*=========================
+    Breadcaump Area 
+===========================*/
+
+.breadcaump-area {
+    .inner {
+        text-align: center;
+        padding-top: 120px;
+        .title {
+            font-size: 64px;
+            color: #ffffff;
+            font-weight: 400;
+        }
+
+        .page-breadcrumb {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            display: -moz-flex;
+            display: flex;
+            -moz-justify-content: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            li {
+                color: #ffffff;
+                font-size: 14px;
+                line-height: 1.71429;
+                margin: 0 6px;
+                a {
+                    color: #ffffff;
+                }
+            }
+        }
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

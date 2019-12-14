@@ -1,0 +1,122 @@
+/*======================
+    Blog Area 
+========================*/
+
+.blog-area{
+    position: relative;
+    z-index: 2;
+}
+.blog{
+    .thumb{
+        img{
+
+        }
+    }
+    .inner{
+        padding: 40px;
+        position: relative;
+        z-index: 1;
+        padding-left: 0;
+        .title{
+            a{
+                line-height: 1.4074;
+                color: #2f2f2f;
+            }
+        }
+        ul{
+            &.meta {
+                padding: 0;
+                margin: 0;
+                list-style: none;
+                margin: 0 -10px;
+
+                li {
+                    font-size: 12px;
+                    line-height: 1;
+                    display: inline-block;
+                    margin: 0 10px;
+
+                    a {
+                        color: #535353;
+                    }
+                }
+            }
+        }
+        .desc {
+            font-size: 16px;
+            line-height: 1.71429;
+        }
+        .blog-btn{
+            .button-link{
+                border: 1px solid #d1d1d1;
+                padding: 12px 40px;
+                text-transform: uppercase;
+                color: #2f2f2f;
+                background-color: rgba(255, 255, 255, 0);
+                line-height: 20px;
+                font-size: 13px;
+                display: inline-block;
+                cursor: pointer;
+                transition: all .5s;
+                &:hover{
+                    color: #fff;
+                    background-color: $theme-color;
+                    border-color: $theme-color;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+/*========================
+Pagination Area 
+===========================*/
+.page-list{
+    @extend %liststyle;
+    margin: 0 -3px;
+    li{
+        display: inline-block;
+        margin: 0 3px;
+        a{
+            font-size: 12px;
+            text-align: center;
+            display: block;
+            position: relative;
+            background: #fff;
+            border: 1px solid #e0e0e0;
+            padding: 15px 10px;
+            line-height: 20px;
+            min-width: 50px;
+            transition: all .3s;
+            display: inline-block;
+            @extend %transition;
+            @extend %bodyColor;
+
+            &:hover{
+                background-color: #2f2f2f;
+                color: #fff;
+                border-color: transparent;
+            }
+        }
+        &.ative{
+            a{
+                background-color: #2f2f2f;
+                color: #fff;
+                border-color: transparent;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+

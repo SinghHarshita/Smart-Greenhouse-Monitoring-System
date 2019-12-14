@@ -1,0 +1,150 @@
+/*==================
+    Pricing Table 
+=====================*/
+
+
+.pricing-table-area .pricing-column:first-child .single-price-package {
+    margin-left: 60px;
+    margin-right: 12px;
+}
+.pricing-table-area .pricing-column:last-child .single-price-package {
+    margin-right: 60px;
+    margin-left: 12px;
+}
+
+.single-price-package {
+    box-shadow: 0 0 20px 1px rgba(35, 31, 32, 0.2);
+    text-align: center;
+    .price-title {
+        background: #2D3E50 none repeat scroll 0 0;
+        padding: 35px 0 34px;
+        h3{
+            color: #ffffff;
+            font-size: 22px;
+            font-weight: 700;
+            line-height: 18px;
+            margin-bottom: 0;
+            text-transform: uppercase;
+        }
+        .price {
+            display: block;
+            h4 ,
+            p {
+                color: #ecebeb;
+                display: inline-block;
+                font-family: "Raleway", sans-serif;
+                font-size: 18px;
+                font-weight: 700;
+                margin-bottom: 0;
+                bottom: -9px;
+                position: relative;
+            }
+            h4{
+                span{
+                    &.text-large{
+                        color: #ffffff;
+                        font-size: 60px;
+                        line-height: 61px;
+                    }
+                    &.text-top {
+                        padding-right: 4px;
+                        position: relative;
+                        top: -20px;
+                    }
+                }
+                
+            }
+        }
+    }
+}
+
+
+
+.price-list {
+    padding-bottom: 30px;
+    padding-top: 50px;
+    ul{
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        li {
+            color: #2d3e50;
+            font-family: "Raleway", sans-serif;
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 32px;
+        }
+    }
+}
+
+
+
+.price-btn .button {
+    background: #2d3e50 none repeat scroll 0 0;
+    border: 0 none;
+    border-radius: 13px;
+    color: #ffffff;
+    font-family: "Raleway", sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 39px;
+    margin-top: 52px;
+    padding: 0 39px;
+    text-transform: uppercase;
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s
+}
+
+.price-btn .button:hover {
+    background-color: #7a9757;
+}
+
+
+.list-large .price .text-top {
+    padding-right: 0;
+    top: -23px;
+}
+
+.list-large .price-title {
+    padding: 37px 0 40px
+}
+
+.single-price-package.list-large {
+    box-shadow: 0 0 20px 1px rgba(35, 31, 32, 0.4);
+    margin: -34px 26px 0;
+}
+
+.list-large .price-list li {
+    line-height: 39px
+}
+
+
+@media #{$sm-layout}{
+    .single-price-package.list-large {
+        margin: 0;
+    }
+    .pricing-table-area .pricing-column:first-child .single-price-package {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .pricing-table-area .pricing-column:last-child .single-price-package {
+        margin-right: 0;
+        margin-left: 0;
+    }
+}
+
+.pricing-table-area {
+    &.vertical-pricing {
+        margin-top: -100px;
+        position: relative;
+        z-index: 2;
+        @media #{$md-layout} {
+            margin-top: 40px;
+        }
+        @media #{$sm-layout} {
+            margin-top: 0;
+        }
+    }
+}
+
+

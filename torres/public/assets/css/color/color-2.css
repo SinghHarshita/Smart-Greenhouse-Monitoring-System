@@ -1,0 +1,108 @@
+/* Color Trquisjh */
+
+
+/* Text Color */
+.theme-color ,
+.slick-prev:hover:before,
+.slick-next:hover:before ,
+.single-post-details .quote-content::before,
+[data-carousel-3d] [data-prev-button]:hover:before,
+[data-carousel-3d] [data-next-button]:hover:before {
+    color: #05C2F9;
+}
+
+.commnent-list-wrap .comment .content .reply-btn a:hover{
+    color: #05C2F9;
+    border: 1px solid #05C2F9;
+}
+
+
+.button-default.button-olive ,
+.button-default:hover ,
+.single-service .service-icon ,
+.feature .feature-icon ,
+.price-btn .button:hover ,
+.contact-inner .input-box .submite-button ,
+.contact-icon ,
+.newsletter-content .button:hover ,
+.comment-form-wrapper .blog-btn a  {
+    background-color: #05C2F9;
+}
+
+.color-picker a.handle ,
+.banner-apps .single-app ,
+.main-menu li a::before ,
+.tap-top ,
+.color-picker .settings-header {
+    background: #05C2F9;
+}
+
+.button-default.button-border ,
+.color-picker .section {
+    border: 1px solid #05C2F9;
+}
+.slick-current .sin-testiImage img {
+    border: 3px solid #05C2F9;
+}
+
+.footer-links a:hover {
+    background-color: #05C2F9;
+    border-color: #05C2F9;
+}
+
+.screenshot-carousel img {
+    filter: hue-rotate(90deg);
+}
+
+.blog .inner .blog-btn .button-link:hover {
+    background-color: #05C2F9;
+    border-color: #05C2F9;
+}
+
+/* Thumbnail Color */
+
+.feature-bg-image {
+    background-image: url(/assets/images/app/preview-2.png);
+}
+
+@media only screen and (max-width: 991px) and (min-width: 768px){
+    .feature-bg-image {
+        margin-top: 0;
+        background-image: inherit;
+    }
+}
+
+@media only screen and (max-width: 767px){
+    .feature-bg-image {
+        margin-top: 0;
+        background-image: inherit;
+    }
+}
+
+
+
+.logo a img.logo-1 ,
+.logo a img.logo-3 ,
+.banner-product-image .image-1 ,
+.banner-product-image .image-3 ,
+.about-thumbnail .image-1 ,
+.about-thumbnail .image-3 ,
+.section-title .image-1 ,
+.section-title .image-3 {
+    display: none;
+}
+
+.logo a img.logo-2 ,
+.banner-product-image .image-2 ,
+.about-thumbnail .image-2  {
+    display: block;
+}
+
+.section-title .image-2 {
+    display: inline-block;
+    text-align: center;
+}
+
+/* 05C2F9 */
+
+
