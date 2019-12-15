@@ -14,7 +14,7 @@ class About extends Component{
                                 <img className="image-2" src="/treesponse-1.png" alt="App Landing"/>
                                 <img className="image-3" src="/treesponse.png" alt="App Landing"/>
                                 {/* Changes need to made here */}
-                                <p>There are many variations of passages of Lorem Ipsum available, but the majorityhave suffered alteration in some form, by injected humour,available</p>
+                                <p>Treesponse is an environment that enables users to interact with their smart greenhouse and allow to monitor parameters affecting the yield of their plants and enable them to have maximum yield in unfavorable conditions </p>
                             </div>
                         </div>
                     </div>
@@ -22,7 +22,7 @@ class About extends Component{
                         <div className="col-lg-5 offset-lg-1 mt--40">
                             <div className="about-thumbnail mr--35">
                                 {/* Changes need to made here */}
-                                <img className="image-1" src="/assets/images/app/mobile.png" alt="App Landing"/>
+                                <img className="image-1" src="greenhouse_about.png" alt="App Landing"/>
                                 <img className="image-2" src="/assets/images/app/mobile-2.png" alt="App Landing"/>
                                 <img className="image-3" src="/assets/images/app/mobile-3.png" alt="App Landing"/>
                             </div>

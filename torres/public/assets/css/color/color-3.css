@@ -68,7 +68,7 @@
 
 
 .feature-bg-image {
-    background-image: url(/assets/images/app/preview-3.png);
+    background-image: url(/public/assets/images/flow.png);
 }
 @media only screen and (max-width: 991px) and (min-width: 768px){
     .feature-bg-image {

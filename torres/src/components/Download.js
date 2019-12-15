@@ -4,7 +4,7 @@ import React , { Component } from "react";
 class Download extends Component{
     render(){
         return(
-            <div className={`download-area ${this.props.horizontal}`}>
+            <div className={`download-area `}>
                 <div className="bg-overlay"></div>
                 <div className="container">
                     <div className="row">

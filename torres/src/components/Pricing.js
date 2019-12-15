@@ -22,12 +22,12 @@ class Pricing extends Component{
                     <div className="row mt--30">
 
                         {/* Start Single Pricing */}
-                        <div className="col-lg-4 col-md-6 col-12 pricing-column mt--40">
+                        {/* <div className="col-lg-4 col-md-6 col-12 pricing-column mt--40">
                             <div className="single-price-package">
                                 <div className="price-title">
                                     <h3>Basic</h3>
                                     <div className="price">
-                                        <h4><span className="text-top">$</span><span className="text-large">50</span></h4>
+                                        <h4><span className="text-top">₹</span><span className="text-large">50</span></h4>
                                         <p><span className="text-bottom">/month</span></p>
                                     </div>
                                 </div>
@@ -44,11 +44,11 @@ class Pricing extends Component{
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
                         {/* End Single Pricing */}
 
                         {/* Start Single Pricing */}
-                        <div className="col-lg-4 col-md-6 col-12 pricing-column mt--40">
+                        {/* <div className="col-lg-4 col-md-6 col-12 pricing-column mt--40">
                             <div className="single-price-package">
                                 <div className="price-title">
                                     <h3>PERSONAL</h3>
@@ -70,29 +70,28 @@ class Pricing extends Component{
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
                         {/* End Single Pricing */}
 
                         {/* Start Single Pricing */}
-                        <div className="col-lg-4 col-md-6 col-12 pricing-column mt--40">
+                        <div className="col-lg-12 col-md-12 col-12 pricing-column mr-auto mt--40">
                             <div className="single-price-package">
                                 <div className="price-title">
                                     <h3>BUSINESS</h3>
                                     <div className="price">
-                                        <h4><span className="text-top">$</span><span className="text-large">110</span></h4>
+                                        <h4><span className="text-top">₹</span><span className="text-large">4000</span></h4>
                                         <p><span className="text-bottom">/month</span></p>
                                     </div>
                                 </div>
                                 <div className="price-list">
                                     <ul>
-                                        <li>Five Website</li>
-                                        <li>Five User</li>
-                                        <li>100 GB Bandwidth</li>
-                                        <li>2 GB Storage</li>
-                                        <li>24x7 Support</li>
+                                        <li>Greenhouse with all sensors maintained</li>
+                                        <li>Power Failure Prevention</li>
+                                        <li>Sensor Maintainance</li>
+                                        <li>24x7 Customer Support</li>
                                     </ul>
                                     <div className="price-btn">
-                                        <button className="button" type="button">Sign up</button>
+                                        <button className="button" type="button">Register</button>
                                     </div>
                                 </div>
                             </div>

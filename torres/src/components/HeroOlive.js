@@ -54,8 +54,8 @@ class HeroOlive extends Component {
                         </div>
                         <div className="col-lg-5">
                             <div className="banner-product-image text-right">
-                                <img className="image-1" src="/assets/images/app/banner-mobile.png" alt="App Landing"/>
-                                <img className="image-2" src="/assets/images/app/banner-mobile-2.png" alt="App Landing"/>
+                                <img className="image-1" src="greenhouse.png" alt="App Landing"/>
+                                <img className="image-2" src="" alt="App Landing"/>
                                 <img className="image-3" src="/assets/images/app/banner-mobile-3.png" alt="App Landing"/>
                             </div>
                         </div>

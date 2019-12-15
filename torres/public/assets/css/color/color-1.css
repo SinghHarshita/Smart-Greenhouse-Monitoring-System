@@ -17,6 +17,25 @@
     display: none;
 }
 
+.feature-bg-image {
+    background-image: url(/greenhouse_flow.png);
+    padding: 50px;
+}
+
+@media only screen and (max-width: 991px) and (min-width: 768px){
+    .feature-bg-image {
+        margin-top: 0;
+        background-image: inherit;
+    }
+}
+
+@media only screen and (max-width: 767px){
+    .feature-bg-image {
+        margin-top: 0;
+        background-image: inherit;
+    }
+}
+
 
 
 

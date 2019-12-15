@@ -9,31 +9,31 @@ class Feature extends Component{
         {
             icon: 'zmdi zmdi-tap-and-play',
             title: 'Unlimited Monitoring',
-            desc: 'There are many variations of passages of Lorem Ipsum available,but the majorityhave suffered alteration in some form, by injected humour,available'
+            desc: 'Connection to a remote server and local logs enabling user to have live data on his app'
         },
 
         {
             icon: 'zmdi zmdi-sun',
             title: 'Light Intensity',
-            desc: 'There are many variations of passages of Lorem Ipsum available,but the majorityhave suffered alteration in some form, by injected humour,available'
+            desc: 'Enables the user to have access to the live light intensity value inside the greenhouse and notify if not within the recommended range'
         },
 
         {
             icon: 'zmdi zmdi-leak',
             title: 'Air & Soil Humidity',
-            desc: 'There are many variations of passages of Lorem Ipsum available,but the majorityhave suffered alteration in some form, by injected humour,available'
+            desc: 'Enables the user to monitor the values of humidity and notify if not within the regulated values'
         },
 
         {
             icon: 'zmdi zmdi-invert-colors',
             title: 'Automated Irrigation',
-            desc: 'There are many variations of passages of Lorem Ipsum available,but the majorityhave suffered alteration in some form, by injected humour,available'
+            desc: 'Regular irrigation patterns can be set for the crops and notified to the user '
         },
 
         {
             icon: 'zmdi zmdi-toll',
             title: 'Air Quality',
-            desc: 'There are many variations of passages of Lorem Ipsum available,but the majorityhave suffered alteration in some form, by injected humour,available'
+            desc: 'Help Monitor the air quality index (QI) and decide whether it is suitable for any cultivation'
         }
        ] 
 
@@ -54,7 +54,7 @@ class Feature extends Component{
        })
 
        return(
-           <div className= {`feature-area feature-bg-image pb--50 ${this.props.horizontalfeature}`} id="features">
+           <div className= {`feature-area feature-bg-image pb--50 ${this.props.horizontalfeature}`} id="features" style = {{ background : '../public/assets/images/greenhouse_flow.png'}}>
                <div className="container">
                    <div className="row">
                        <div className="col-lg-12">
@@ -63,7 +63,7 @@ class Feature extends Component{
                                 <img className="image-1" src="/treesponse-2.png" alt="App Landing"/>
                                 <img className="image-2" src="/treesponse-1.png" alt="App Landing"/>
                                 <img className="image-3" src="/treesponse.png" alt="App Landing"/>
-                                <p>There are many variations of passages of Lorem Ipsum available, but the majorityhave suffered alteration in some form, by injected humour,available</p>
+                                <p>Our aim is to provide the best possible way to provide with an interractive environment for interraction with multi-sensor environment</p>
                             </div>
                        </div>
                    </div>
