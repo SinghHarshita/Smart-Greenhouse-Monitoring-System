@@ -25,7 +25,7 @@ SECRET_KEY = 'b_jho*r!+t^!i4is)a!rq8)q83uiewu&ql+#4%-+cq4yb3hh5#'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost','127.0.0.1','192.168.5.7','gapi.com']
 
 
 # Application definition
@@ -38,8 +38,29 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'SmartGreenhouseApi',
-    'rest_framework'
+    'rest_framework',
+    'social_django'
 ]
+
+SOCIAL_AUTH_URL_NAMESPACE = 'social'
+
+AUTHENTICATION_BACKENDS = (
+    'social_core.backends.google.GoogleOAuth2',
+    'django.contrib.auth.backends.ModelBackend',
+)
+
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '517781533942-7k02oetvdgm7499hhspp3g6bj6joupk9.apps.googleusercontent.com'
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = 'gCxksmM6r3bJzepJVzafUwfP'
+
+SESSION_COOKIE_SAMESITE = None
+
+LOGIN_URL = '/auth/login/google-oauth2/'
+
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
+
+
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
