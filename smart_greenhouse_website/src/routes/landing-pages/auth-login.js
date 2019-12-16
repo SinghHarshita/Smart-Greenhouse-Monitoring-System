@@ -95,8 +95,8 @@ class AuthLogin extends Component {
                             <Input type="password" />
                             <IntlMessages id="lp.login.password" />
                           </Label>
-
-                          <Button color="empty" className="btn-outline-semi-light mt-4" size="xl" href="/app/dashboards/default">
+                          
+                          <Button color="empty" className="btn-outline-semi-light mt-4" size="xl" href="/app/dashboards">
                             {messages["lp.login.buttonlabel"]}
                           </Button>
 
