@@ -67,18 +67,18 @@ export default class SectionHero extends React.Component {
                                         <p><IntlMessages id="lp.footer.menu-1" /></p>
                                     </li>
                                     <li>
-                                        <NavLink to="/about">
-                                            <IntlMessages id="lp.footer.menu-1-1" />
+                                        <NavLink to="/">
+                                            Features
                                         </NavLink>
                                     </li>
                                     <li>
-                                        <NavLink to="/blog">
-                                            <IntlMessages id="lp.footer.menu-1-2" />
+                                        <NavLink to="/">
+                                            Team
                                         </NavLink>
                                     </li>
                                     <li>
-                                        <NavLink to="/careers">
-                                            <IntlMessages id="lp.footer.menu-1-3" />
+                                        <NavLink to="/">
+                                            Pricing
                                         </NavLink>
                                     </li>
                                     <li>
@@ -201,7 +201,7 @@ export default class SectionHero extends React.Component {
                 <Container className="copyright pt-5 pb-5">
                     <Row>
                         <div className="col-6">
-                            <p className="mb-0"><IntlMessages id="lp.footer.copyright" /></p>
+                            <p className="mb-0">Treesponse</p>
                         </div>
                         <div className="col-6 text-right social-icons">
                             <ul className="list-unstyled list-inline">

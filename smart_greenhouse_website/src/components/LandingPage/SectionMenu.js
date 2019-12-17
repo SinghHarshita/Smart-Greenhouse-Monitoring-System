@@ -236,7 +236,7 @@ export class MenuSinglepage extends Component {
           <NavItem>
             <NavLink
               className="btn btn-outline-semi-light btn-sm pr-4 pl-4"
-              to="auth-login"
+              to="auth-register"
             >
               <IntlMessages id="lp.menu.signup" />
             </NavLink>
