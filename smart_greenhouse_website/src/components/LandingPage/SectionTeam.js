@@ -28,7 +28,7 @@ export default class SectionTeam extends React.Component {
                         <div className="pr-3 pl-3 d-flex">
                             <Card>
                                 <div className="position-relative">
-                                    <img className="card-img-top" src="/assets/img/landing-page/team-1.jpg" alt="Card cap" />
+                                    <img className="card-img-top" src="/assets/img/team/j.png" alt="Card cap" />
                                     <Badge color="secondary" pill className="position-absolute badge-top-left">HARDWARE</Badge>
                                 </div>
                                 <CardBody>
@@ -45,7 +45,7 @@ export default class SectionTeam extends React.Component {
                         <div className="pr-3 pl-3 d-flex">
                             <Card>
                                 <div className="position-relative">
-                                    <img className="card-img-top" src="/assets/img/landing-page/team-3.jpg" alt="Card cap" />
+                                    <img className="card-img-top" src="/assets/img/team/s.png" alt="Card cap" height="150px" width="110px" />
                                     <Badge color="success" pill className="position-absolute badge-top-left">BACKEND</Badge>
                                 </div>
                                 <CardBody>
@@ -62,7 +62,7 @@ export default class SectionTeam extends React.Component {
                         <div className="pr-3 pl-3 d-flex">
                             <Card>
                                 <div className="position-relative">
-                                    <img className="card-img-top" src="/assets/img/landing-page/team-2.jpg" alt="Card cap" />
+                                    <img className="card-img-top" src="/assets/img/team/v.png" alt="Card cap" />
                                     <Badge color="primary" pill className="position-absolute badge-top-left">DATABASE</Badge>
                                 </div>
                                 <CardBody>
@@ -79,7 +79,7 @@ export default class SectionTeam extends React.Component {
                         <div className="pr-3 pl-3 d-flex">
                             <Card>
                                 <div className="position-relative">
-                                    <img className="card-img-top" src="/assets/img/landing-page/team-4.jpg" alt="Card cap" />
+                                    <img className="card-img-top" src="/assets/img/team/h.png" alt="Card cap" />
                                     <Badge color="danger" pill className="position-absolute badge-top-left">FRONTEND</Badge>
                                 </div>
                                 <CardBody>

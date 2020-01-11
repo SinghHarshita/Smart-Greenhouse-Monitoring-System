@@ -30,7 +30,7 @@ export default class SectionHeroHome extends React.Component {
           <img
             alt="mobile hero"
             className="mobile-hero"
-            src="/assets/img/landing-page/greenhouse.png"
+            src="/assets/img/logo/header.png"
           />
         </Colxx>
 
@@ -66,7 +66,7 @@ export default class SectionHeroHome extends React.Component {
           lg="7"
           className="d-none d-md-block"
         >
-          <img alt="hero" src="/assets/img/landing-page/greenhouse.png" />
+          <img alt="hero" src="/assets/img/logo/header.png" />
         </Colxx>
       </Row>
     );

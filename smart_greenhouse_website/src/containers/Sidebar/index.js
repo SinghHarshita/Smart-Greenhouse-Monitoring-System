@@ -197,7 +197,7 @@ class Sidebar extends Component {
 
   changeDefaultMenuType(e, containerClassnames) {
     e.preventDefault();
-    let nextClasses = this.getMenuClassesForResize(containerClassnames);
+    let nextClasses = this.getMenuClassesForResize("menu-sub-hidden");
     this.props.setContainerClassnames(0, nextClasses.join(" "));
   }
 
@@ -236,6 +236,7 @@ class Sidebar extends Component {
       viewingParentMenu : selectedParent 
     });
   }
+  
   changeViewingParentMenu(menu){
     this.toggle();
 
@@ -253,6 +254,8 @@ class Sidebar extends Component {
               option={{ suppressScrollX: true, wheelPropagation: false }}
             >
               <Nav vertical className="list-unstyled">
+                
+                {/* Dashboard */}
                 <NavItem
                   className={classnames({
                     active: ((this.state.selectedParentMenu == "dashboards" && this.state.viewingParentMenu=="" )|| this.state.viewingParentMenu=="dashboards")
@@ -262,12 +265,13 @@ class Sidebar extends Component {
                     to="/app/dashboards/default"
                     onClick={e => this.openSubMenu(e, "dashboards")}
                   >
-                    <i className="iconsmind-Shop-4" />{" "}
-                    <IntlMessages id="menu.dashboards" />
+                    <i className="iconsmind-Monitor-Analytics" />{" "}
+                    {/* <IntlMessages id="menu.dashboards" /> */}
+                    Dashboard
                   </NavLink>
                 </NavItem>
 
-
+                {/* Layouts to Crop Settings */}
                 <NavItem
                   className={classnames({
                     active: ((this.state.selectedParentMenu == "layouts" && this.state.viewingParentMenu=="" ) || this.state.viewingParentMenu=="layouts")
@@ -277,10 +281,13 @@ class Sidebar extends Component {
                     to="/app/layouts"
                     onClick={e => this.openSubMenu(e, "layouts")}
                   >
-                    <i className="iconsmind-Digital-Drawing" />{" "}
-                    <IntlMessages id="menu.layouts" />
+                    <i className="iconsmind-Plant" />{" "}
+                    {/* <IntlMessages id="menu.layouts" /> */}
+                    Crop Settings
                   </NavLink>
                 </NavItem>
+
+                {/* Applications to Add crop */}
                 <NavItem
                   className={classnames({
                     active: ((this.state.selectedParentMenu == "applications" && this.state.viewingParentMenu=="" )|| this.state.viewingParentMenu=="applications")
@@ -290,8 +297,9 @@ class Sidebar extends Component {
                     to="/app/applications"
                     onClick={e => this.openSubMenu(e, "applications")}
                   >
-                    <i className="iconsmind-Air-Balloon" />{" "}
-                    <IntlMessages id="menu.applications" />
+                    <i className="iconsmind-Quill-2" />{" "}
+                    {/* <IntlMessages id="menu.applications" /> */}
+                    Add New Crop
                   </NavLink>
                 </NavItem>
                 <NavItem
@@ -668,6 +676,7 @@ class Sidebar extends Component {
             </PerfectScrollbar>
           </div>
         </div>
+
       </div>
     );
   }

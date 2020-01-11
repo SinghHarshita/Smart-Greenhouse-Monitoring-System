@@ -36,14 +36,14 @@ export default class SectionFeatures extends React.Component {
                         </div>
                     </Colxx>
                     <Colxx xxs="12" md={{ size: "6", offset: 0 }} lg={{ size: "6", offset: 1 }} className="position-relative">
-                        <img alt="feature" className="feature-image-right feature-image-charts position-relative" src="/assets/img/landing-page/feature.png" />
+                        <img alt="feature" className="feature-image-right feature-image-charts position-relative" src="/assets/img/logo/smart-greenhouse-lighting.png" width="550px" />
                     </Colxx>
                 </Row>
 
                 {/* Air & Soil Humidity */}
                 <Row className="featur1e-row">
                     <Colxx xxs={{ size: 12, order: 2 }} md={{ size: 6, order: 1 }} lg="6">
-                        <img alt="feature" className="feature-image-left feature-image-charts" src="/assets/img/landing-page/feature-2.png" />
+                        <img alt="feature" className="feature-image-left feature-image-charts" src="/assets/img/landing-page/soil.png" />
                     </Colxx>
                     <Colxx xxs={{ size: 12, order: 1 }} md={{ size: 6, offset: 0, order: 2 }} lg={{ size: 5, offset: 1 }} className="d-flex align-items-center">
                         <div className="d-flex">
@@ -82,14 +82,14 @@ export default class SectionFeatures extends React.Component {
                         </div>
                     </Colxx>
                     <Colxx xxs="12" md={{ size: "6", offset: 0 }} lg={{ size: "6", offset: 1 }} className="position-relative">
-                        <img alt="feature" className="feature-image-right feature-image-charts position-relative" src="/assets/img/landing-page/feature-3.png" />
+                        <img alt="feature" className="feature-image-right feature-image-charts position-relative" src="/assets/img/landing-page/irrigation.png" width="550px" />
                     </Colxx>
                 </Row>
                 
                 {/* Air Quality */}
                 <Row className="featur1e-row">
                     <Colxx xxs={{ size: 12, order: 2 }} md={{ size: 6, order: 1 }} lg="6">
-                        <img alt="feature" className="feature-image-left feature-image-charts" src="/assets/img/landing-page/feature-2.png" />
+                        <img alt="feature" className="feature-image-left feature-image-charts" src="/assets/img/logo/smart-greenhouse-overview-01.png" width="550px"  />
                     </Colxx>
                     <Colxx xxs={{ size: 12, order: 1 }} md={{ size: 6, offset: 0, order: 2 }} lg={{ size: 5, offset: 1 }} className="d-flex align-items-center">
                         <div className="d-flex">

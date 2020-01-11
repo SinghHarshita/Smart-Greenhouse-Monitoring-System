@@ -56,7 +56,7 @@ module.exports = {
     devServer: {
         contentBase: './src/index.js',
         compress: true,
-        port: 3005, // port number
+        port: 3000, // port number
         historyApiFallback: true,
         quiet: true
     },
