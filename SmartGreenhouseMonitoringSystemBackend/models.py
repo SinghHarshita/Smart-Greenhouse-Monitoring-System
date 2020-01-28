@@ -79,7 +79,7 @@ class IrrigationLog(models.Model):
 class LogEveryHour(models.Model):
     ucp = models.ForeignKey('UserCropProductMapping', models.DO_NOTHING)
     date = models.DateField()
-    details = models.IntegerField()
+    details = models.TextField()
 
     class Meta:
         managed = False
