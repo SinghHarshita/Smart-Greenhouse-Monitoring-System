@@ -21,3 +21,14 @@ Navigate to the Django project directory. Run the following command in the comma
 #### `python manage.py runserver`
 
 ##### Note : Run the django server on the default port (8000)
+
+Jobs:
+    Vignesh
+1. Login/Register
+2. Update existing crop details
+3. Update irrigation details
+4. Storing Log every one hour
+
+    Sumedh
+1. Add new Crop
+2. Add irrigation details for the crop
