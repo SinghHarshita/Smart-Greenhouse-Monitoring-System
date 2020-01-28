@@ -107,10 +107,10 @@ export const visitChartConfig = {
             drawBorder: false
           },
           ticks: {
-            beginAtZero: true,
-            stepSize: 5,
-            min: 50,
-            max: 70,
+            beginAtZero: 40,
+            stepSize: 10,
+            min: 0,
+            max: 100,
             padding: 20
           }
         }
@@ -129,7 +129,7 @@ export const visitChartConfig = {
     datasets: [
       {
         label: "",
-        data: [54, 63, 60, 65, 60, 68, 60],
+        data: [80,75,80,89,90,80,80],
         borderColor: colors.themeColor1,
         pointBackgroundColor: colors.foregroundColor,
         pointBorderColor: colors.themeColor1,
@@ -168,9 +168,9 @@ export const conversionChartConfig = {
           },
           ticks: {
             beginAtZero: true,
-            stepSize: 5,
-            min: 50,
-            max: 70,
+            stepSize: 20,
+            min: 0,
+            max: 100,
             padding: 20
           }
         }
@@ -179,17 +179,24 @@ export const conversionChartConfig = {
         {
           gridLines: {
             display: false
+          },
+          ticks: {
+            beginAtZero: true,
+            stepSize: 1,
+            min: 0,
+            max: 23,
+            padding: 20
           }
         }
       ]
     }
   },
   data: {
-    labels: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+    labels: [8,9,10,11,12,13,14,15],
     datasets: [
       {
         label: "",
-        data: [65, 60, 68, 60, 58, 63, 60],
+        data: [89, 92, 92, 90, 90, 89, 89],
         borderColor: colors.themeColor2,
         pointBackgroundColor: colors.foregroundColor,
         pointBorderColor: colors.themeColor2,
@@ -232,8 +239,8 @@ export const conversionChartConfig = {
             ticks: {
               beginAtZero: true,
               stepSize: 5,
-              min: 50,
-              max: 70,
+              min: 25,
+              max: 45,
               padding: 20
             }
           }
@@ -252,7 +259,7 @@ export const conversionChartConfig = {
       datasets: [
         {
           label: "",
-          data: [54, 63, 60, 65, 60, 68, 60],
+          data: [28, 29, 28.6, 28, 29, 29],
           borderColor: colors.themeColor1,
           pointBackgroundColor: colors.foregroundColor,
           pointBorderColor: colors.themeColor1,
@@ -317,17 +324,17 @@ export const conversionChartConfig = {
       labels: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
       datasets: [
         {
-          label: "Total Orders",
+          label: "Avg Temp",
           borderColor: colors.themeColor1,
           pointBorderColor: colors.themeColor1,
           pointHoverBackgroundColor: colors.themeColor1,
-          pointHoverBorderColor: colors.themeColor1,
+          pointHoverBorderColor: colors.themeColor3,
           pointRadius: 2,
           pointBorderWidth: 3,
           pointHoverRadius: 2,
-          fill: false,
+          fill: true,
           borderWidth: 2,
-          data: [1250, 1300, 1550, 921, 1810, 1106, 1610],
+          data: [28, 28.9, 27.6, 28, 27.9, 28],
           datalabels: {
             align: "end",
             anchor: "end"
@@ -437,14 +444,14 @@ export const doughnutChartConfig = {
       tooltips: chartTooltip
     },
     data: {
-      labels: ["Cakes", "Cupcakes", "Desserts"],
+      labels: ["Good", "Bad", "Alert"],
       datasets: [
         {
           label: "",
           borderColor: [colors.themeColor3, colors.themeColor2, colors.themeColor1],
           backgroundColor: [colors.themeColor3_10, colors.themeColor2_10, colors.themeColor1_10],
           borderWidth: 2,
-          data: [15, 25, 20]
+          data: [30, 75, 145]
         }
       ]
     }

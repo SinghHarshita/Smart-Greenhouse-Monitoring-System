@@ -48,10 +48,11 @@ export default class AnalyticsDashboard extends Component {
       <Fragment>
         <Row>
           <Colxx xxs="12">
-            <BreadcrumbContainer
-              heading={<IntlMessages id="menu.analytics" />}
+            {/* <BreadcrumbContainer
+              heading="Hello"
               match={this.props.match}
-            />
+            /> */}
+            <h2>Welcome Back, Sarah Kortney!</h2>
             <Separator className="mb-5" />
           </Colxx>
         </Row>
@@ -62,16 +63,18 @@ export default class AnalyticsDashboard extends Component {
                 <div className="float-left float-none-xs">
                   <div className="d-inline-block">
                     <h5 className="d-inline">
-                      <IntlMessages id="dashboards.website-visits" />
+                      {/* <IntlMessages id="dashboards.website-visits" /> */}
+                      Soil Mositure
                     </h5>
                     <span className="text-muted text-small d-block">
-                      <IntlMessages id="dashboards.unique-visitors" />
+                      {/* <IntlMessages id="dashboards.unique-visitors" /> */}
+                      Soil Mositure throughout the week
                     </span>
                   </div>
                 </div>
 
                 <div className="btn-group float-right float-none-xs mt-2">
-                  <UncontrolledDropdown>
+                  {/* <UncontrolledDropdown>
                     <DropdownToggle
                       caret
                       color="primary"
@@ -88,7 +91,7 @@ export default class AnalyticsDashboard extends Component {
                         <IntlMessages id="dashboards.this-month" />
                       </DropdownItem>
                     </DropdownMenu>
-                  </UncontrolledDropdown>
+                  </UncontrolledDropdown> */}
                 </div>
               </CardBody>
 
@@ -103,16 +106,18 @@ export default class AnalyticsDashboard extends Component {
                 <div className="float-left float-none-xs">
                   <div className="d-inline-block">
                     <h5 className="d-inline">
-                      <IntlMessages id="dashboards.conversion-rates" />
+                      {/* <IntlMessages id="dashboards.conversion-rates" /> */}
+                      Today's Soil Mositure
                     </h5>
                     <span className="text-muted text-small d-block">
-                      <IntlMessages id="dashboards.per-session" />
+                      {/* <IntlMessages id="dashboards.per-session" /> */}
+                      Per hour
                     </span>
                   </div>
                 </div>
 
                 <div className="btn-group float-right float-none-xs mt-2">
-                  <UncontrolledDropdown>
+                  {/* <UncontrolledDropdown>
                     <DropdownToggle
                       caret
                       color="secondary"
@@ -129,7 +134,7 @@ export default class AnalyticsDashboard extends Component {
                         <IntlMessages id="dashboards.this-month" />
                       </DropdownItem>
                     </DropdownMenu>
-                  </UncontrolledDropdown>
+                  </UncontrolledDropdown> */}
                 </div>
               </CardBody>
 
@@ -145,7 +150,8 @@ export default class AnalyticsDashboard extends Component {
             <Card className="h-100">
               <CardBody>
                 <CardTitle>
-                  <IntlMessages id="dashboards.product-categories" />
+                  {/* <IntlMessages id="dashboards.product-categories" /> */}
+                  Air Quality
                 </CardTitle>
                 <div className="dashboard-donut-chart">
                   <DoughnutShadow {...doughnutChartConfig} />
@@ -157,7 +163,8 @@ export default class AnalyticsDashboard extends Component {
             <Card className="dashboard-progress">
               <CardBody>
                 <CardTitle>
-                  <IntlMessages id="dashboards.profile-status" />
+                  {/* <IntlMessages id="dashboards.profile-status" /> */}
+                  Irrigation Information
                 </CardTitle>
                 {profileStatuses.map((s, index) => {
                   return (
@@ -177,21 +184,21 @@ export default class AnalyticsDashboard extends Component {
           </Colxx>
           <Colxx xl="4" lg="12" md="12">
             <Row>
-              <Colxx xxs="6" className="mb-4">
+              {/* <Colxx xxs="6" className="mb-4">
                 <Card className="dashboard-small-chart-analytics">
                   <CardBody>
                     <SmallLineChart {...smallChartData1} />
                   </CardBody>
                 </Card>
-              </Colxx>
-              <Colxx xxs="6" className="mb-4">
+              </Colxx> */}
+              {/* <Colxx xxs="6" className="mb-4">
                 <Card className="dashboard-small-chart-analytics">
                   <CardBody>
                     <SmallLineChart {...smallChartData2} />
                   </CardBody>
                 </Card>
-              </Colxx>
-              <Colxx xxs="6" className="mb-4">
+              </Colxx> */}
+              {/* <Colxx xxs="6" className="mb-4">
                 <Card className="dashboard-small-chart-analytics">
                   <CardBody>
                     <SmallLineChart {...smallChartData3} />
@@ -204,12 +211,12 @@ export default class AnalyticsDashboard extends Component {
                     <SmallLineChart {...smallChartData4} />
                   </CardBody>
                 </Card>
-              </Colxx>
+              </Colxx> */}
             </Row>
           </Colxx>
         </Row>
 
-        <Sortable
+        {/* <Sortable
           options={{
             handle: ".handle"
           }}
@@ -299,9 +306,9 @@ export default class AnalyticsDashboard extends Component {
               </CardBody>
             </Card>
           </Colxx>
-        </Sortable>
+        </Sortable> */}
 
-        <Row>
+        {/* <Row>
           <Colxx xxs="12" lg="6" className="mb-4">
             <Card>
               <CardBody>
@@ -326,7 +333,7 @@ export default class AnalyticsDashboard extends Component {
               </CardBody>
             </Card>
           </Colxx>
-        </Row>
+        </Row> */}
 
         <Row>
           <Colxx xxs="12" className="mb-4">
