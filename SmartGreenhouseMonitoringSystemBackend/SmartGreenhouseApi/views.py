@@ -21,6 +21,8 @@ from datetime import datetime, timedelta
 from .models import User,Crops,CropsLog,Irrigation,IrrigationLog,LogEveryHour,Products,Irrigation
 
 from rest_framework.authentication import get_authorization_header
+import ast
+import yaml
 
 def create_jwt(email, password):
     # Just for Uniqueness
@@ -111,6 +113,7 @@ class login(APIView):
                 for j in log_data:
                     if j['id'] == i['fields']['ucp']:
                         i['fields']['pid'] = j['pid']
+                        i['fields']['details'] = json.loads(i['fields']['details'])
                         log_details.append(i['fields'])
                         break
             print(log_details)
@@ -330,6 +333,8 @@ class logEveryHour(APIView):
             "msg": "Logged Successfully...",
             "status": 1
         }
+
+        # ideal_crop_details = Crops.objects.get(cid=)
         return Response(msg)
 
 class AddNewProduct(APIView):
@@ -420,3 +425,45 @@ class AddIrrigationDetails(APIView):
                 "status": 0
             }
         return Response(msg)
+
+class GetIrrigationDetails(APIView):
+    def get(self, request, format=None):
+        return Response({"method": "Get Method"})
+
+    def post(self, request, format=None):
+        # Decode the token
+        decode_data = decode_jwt(request)
+        email = decode_data['username']
+        password = decode_data['password']
+        try:
+            # Authenticating the user
+            user = User.objects.get(email=email, password=password)
+            user_detail = json.loads(serializers.serialize('json',[user,]))
+            uid = user_detail[0]['pk']
+        except:
+            msg = {
+                "msg": "Authentication Failed...",
+                "status": 0
+            }
+            return Response(msg)
+        data = request.data
+        if type(data['ucp_id']) == list:
+            data = request.POST.dict()
+        try:
+            now = datetime.now()
+            cur_date = now.strftime("%Y-%m-%d")
+            cur_time = now.strftime("%Y-%m-%d %H:%M:%S")
+            # Fetching current date irrigation details
+            irrigation_details = Irrigation.objects.get(ucp=data['ucp_id'], date=cur_date)
+            irrigation_details = json.loads(serializers.serialize('json',[irrigation_details,]))[0]
+            details = yaml.load(irrigation_details['fields']['details'])
+            details = details[0]
+            print(type(details),details)
+            # print(irrigation_details)
+            return Response(details)
+        except:
+            # If data is not present then fetching default irrigation details
+            irrigation_details = UserCropProductMapping.objects.get(id=data['ucp_id'])
+            irrigation_details = json.loads(serializers.serialize('json',[irrigation_details,]))
+            details = irrigation_details[0]['fields']['default_irrigation']
+            return Response(details)

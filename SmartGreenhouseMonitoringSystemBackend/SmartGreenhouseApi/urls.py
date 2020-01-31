@@ -10,5 +10,6 @@ urlpatterns = [
     path('updateirrigationdetails', views.UpdateIrrigationDetails.as_view(), name="updateirrigationdetails"),
     path('logeveryhour', views.logEveryHour.as_view(), name="logeveryhour"),
     path('addnewproduct', views.AddNewProduct.as_view(), name='addnewproduct'),
-    path('addirrigationdetails', views.AddIrrigationDetails.as_view(),name="addirrigationdetails"),
+    path('addirrigationdetails', views.AddIrrigationDetails.as_view(), name="addirrigationdetails"),
+    path('getirrigationdetails', views.GetIrrigationDetails.as_view(), name="getirrigationdetails"),
 ]
