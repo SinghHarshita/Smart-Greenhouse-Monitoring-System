@@ -1,3 +1,13 @@
+# *
+# *
+# * Project Name: 	Smart Greenhouse Monitoring System
+# * Author List: Vignesh Pillai , Jay Bendre
+# *		
+# * Filename: urls.py
+# * Output : Maps the url of the websites to the functions in the views.py
+# * 
+# */
+
 from django.urls import path
 from django.conf.urls import url
 

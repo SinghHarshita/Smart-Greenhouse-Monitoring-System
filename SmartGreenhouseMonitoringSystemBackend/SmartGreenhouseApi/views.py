@@ -1,3 +1,14 @@
+# *
+# *
+# * Project Name: 	Smart Greenhouse Monitoring System
+# * Author List: Vignesh Pillai , Jay Bendre
+# *		
+# * Filename: views.py
+# * Functions: create_jwt() , decode_jwt() , login , register UpdateIrrigationDetails
+# * 
+# */
+
+
 from django.shortcuts import render
 from django.http import HttpResponse,JsonResponse
 from rest_framework.response import Response
@@ -22,6 +33,15 @@ from .models import User,Crops,CropsLog,Irrigation,IrrigationLog,LogEveryHour,Pr
 
 from rest_framework.authentication import get_authorization_header
 
+# /*
+# *
+# * Function Name: 	create_jwt(email , password)
+# * Input: 	email : email id of the user
+#           password : password entered by the user
+# * Output: Returns JWT token
+# * Logic: 	Encodes the user data into a JWT token
+# */
+
 def create_jwt(email, password):
     # Just for Uniqueness
     expiry = jwtdt.date.today()
@@ -29,6 +49,14 @@ def create_jwt(email, password):
     # Creating token with email known as username and password
     token = jws.sign({'username': email, 'password': password , 'expiry': str(expiry)}, 'seKre8',  algorithm='HS256')
     return token
+
+# /*
+# *
+# * Function Name: 	create_jwt(email , password)
+# * Input: request : request object
+# * Output: JSON of user details
+# * Logic: 	decodes the JWT token
+# */
 
 def decode_jwt(request):
     headers = get_authorization_header(request).split()
@@ -59,6 +87,16 @@ def decode_jwt(request):
             "message" : 'Invalid Header'
         }
         return msg
+
+
+# /*
+# *
+# * Function Name: 	class Login
+# * Input: self , request 
+# * Output: returns Dashboard 
+# * Logic: 	rendering of user data
+# */
+
 
 class login(APIView):
     def get(self, request, format=None):
@@ -120,6 +158,16 @@ class login(APIView):
 
         return Response(data)
 
+
+# /*
+# *
+# * Function Name: 	class Register
+# * Input: self, request : request object
+# * Output: New user added to the system
+# * Logic: 	Inserts the new user into the db
+# */
+
+
 class register(APIView):
     def get(self, request, format=None):
         return Response({"data": "Get Method"})
@@ -149,6 +197,16 @@ class register(APIView):
                 "status": 0
             }
         return Response(msg)
+
+
+# /*
+# *
+# * Function Name: 	class UpdateCropDetails
+# * Input: self, request : request object
+# * Output: Updating crop details
+# * Logic: 	Updates the DB with the new crop details
+# */
+
 
 class UpdateCropDetails(APIView):
     def get(self,request,format=None):
@@ -224,6 +282,15 @@ class UpdateCropDetails(APIView):
 
         return Response(msg)
 
+
+# /*
+# *
+# * Function Name: 	class UpdateIrrigationDetails
+# * Input: self, request : request object
+# * Output: Updating Irrigation details
+# * Logic: 	Updates the DB with the new Irrigation Schedule
+# */
+
 class UpdateIrrigationDetails(APIView):
     def get(self, request, format=None):
         return Response({"data": "Get Method"})
@@ -282,6 +349,14 @@ class UpdateIrrigationDetails(APIView):
             }
         return Response(msg)
 
+
+# /*
+# *
+# * Function Name: 	class logEveryHour
+# * Input: self, request : request object
+# * Output: Logging information hourly into DB
+# * Logic: 	Logs the sensor data 
+# */
 class logEveryHour(APIView):
     def get(self, request, format=None):
         return Response({"msg": "Get Method"})
@@ -332,6 +407,13 @@ class logEveryHour(APIView):
         }
         return Response(msg)
 
+# /*
+# *
+# * Function Name: 	class AddNewProduct
+# * Input: self, request : request object
+# * Output: New Producted added in the DB
+# * Logic: New product if valid gets added in the DB
+# */
 class AddNewProduct(APIView):
     def get(self, request, format=None):
         return Response({"method": "Get Method"})
@@ -377,6 +459,15 @@ class AddNewProduct(APIView):
                 "status": 0
             }
             return Response(msg)
+
+
+# /*
+# *
+# * Function Name: 	class AddIrrigationDetails
+# * Input: self, request : request object
+# * Output: Irrigation Details added in the DB
+# * Logic: Map user to irrigation and add schedule to the DB
+# */
 
 class AddIrrigationDetails(APIView):
     def get(self, request, format=None):
