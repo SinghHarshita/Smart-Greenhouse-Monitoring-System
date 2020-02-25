@@ -467,3 +467,32 @@ class GetIrrigationDetails(APIView):
             irrigation_details = json.loads(serializers.serialize('json',[irrigation_details,]))
             details = irrigation_details[0]['fields']['default_irrigation']
             return Response(details)
+
+class getCropDetails(APIView):
+    def get(self, request, format=None):
+        return Response({"msg": "Get Method..."})
+    
+    def post(self, request, format=None):
+        # Decode the token
+        decode_data = decode_jwt(request)
+        email = decode_data['username']
+        password = decode_data['password']
+        try:
+            # Authenticating the user
+            user = User.objects.get(email=email, password=password)
+            user_detail = json.loads(serializers.serialize('json',[user,]))
+            uid = user_detail[0]['pk']
+        except:
+            msg = {
+                "msg": "Authentication Failed...",
+                "status": 0
+            }
+            return Response(msg)
+        data = request.data
+        if type(data['cid']) == list:
+            data = request.POST.dict()
+        crop_details = Crops.objects.get(cid=data['cid'])
+        crop_details = json.loads(serializers.serialize('json',[crop_details]))
+        crop_details = crop_details[0]['fields']
+        print(crop_details)
+        return Response(crop_details)

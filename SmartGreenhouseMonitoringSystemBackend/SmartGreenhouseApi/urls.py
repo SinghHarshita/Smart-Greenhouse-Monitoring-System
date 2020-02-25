@@ -12,4 +12,5 @@ urlpatterns = [
     path('addnewproduct', views.AddNewProduct.as_view(), name='addnewproduct'),
     path('addirrigationdetails', views.AddIrrigationDetails.as_view(), name="addirrigationdetails"),
     path('getirrigationdetails', views.GetIrrigationDetails.as_view(), name="getirrigationdetails"),
+    path('getCropDetails', views.getCropDetails.as_view(), name="getCropDetails")
 ]
