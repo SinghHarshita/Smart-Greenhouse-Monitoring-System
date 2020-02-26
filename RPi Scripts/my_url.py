@@ -7,7 +7,7 @@ def is_connected():
     try:
         # connect to the host -- tells us if the host is actually
         # reachable
-        socket.create_connection(("192.168.45.23", 8000))
+        socket.create_connection((only_url, 8000))
         return True
     except OSError:
         pass

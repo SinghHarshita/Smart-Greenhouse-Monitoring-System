@@ -1,0 +1,6 @@
+
+Pins                        GPIO        Function
+16(e1),18(e2),22(en)        23,24,25    Ground Irrigation(H-Bridge Left)
+11(d),4(v),14(G)            17,,,       Temperature sensor
+38(s1D),40(s2D),4(v),6(G)   20,21,,,    Soil Moisture Sensor
+8(e1),10(e2),12(en)         14,15,18    Sprinkle Irrigation(H-Bridge Right)

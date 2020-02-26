@@ -466,7 +466,7 @@ class GetIrrigationDetails(APIView):
             irrigation_details = UserCropProductMapping.objects.get(id=data['ucp_id'])
             irrigation_details = json.loads(serializers.serialize('json',[irrigation_details,]))
             details = irrigation_details[0]['fields']['default_irrigation']
-            return Response(details)
+            return Response(json.loads(details))
 
 class getCropDetails(APIView):
     def get(self, request, format=None):

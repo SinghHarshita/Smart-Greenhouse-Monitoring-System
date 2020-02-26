@@ -9,6 +9,11 @@ import time
 in1 = 24
 in2 = 23
 en = 25
+# For Sprinkle
+sin1 = 14
+sin2 = 15
+sen = 18
+
 temp1=1
 
 GPIO.setmode(GPIO.BCM)
@@ -19,6 +24,14 @@ GPIO.output(in1,GPIO.HIGH)
 GPIO.output(in2,GPIO.LOW)
 p=GPIO.PWM(en,1000)
 p.start(25)
+
+GPIO.setup(sin1,GPIO.OUT)
+GPIO.setup(sin2,GPIO.OUT)
+GPIO.setup(sen,GPIO.OUT)
+GPIO.output(sin1,GPIO.HIGH)
+GPIO.output(sin2,GPIO.LOW)
+s=GPIO.PWM(sen,1000)
+s.start(25)
 '''
 print("\n")
 print("The default speed & direction of motor is LOW & Forward.....")
@@ -92,7 +105,8 @@ def ground_irrigate(server_url):
     main_irrigate(server_url)
 
 def sprinkle_irrigate():
-    irrigate()
+    GPIO.output(sin1,GPIO.HIGH)
+    GPIO.output(sin2,GPIO.LOW)
 
 def finish_irrigation():
     GPIO.cleanup()
