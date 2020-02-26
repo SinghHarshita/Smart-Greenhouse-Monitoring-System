@@ -488,6 +488,7 @@ class getCropDetails(APIView):
                 "status": 0
             }
             return Response(msg)
+        
         data = request.data
         if type(data['cid']) == list:
             data = request.POST.dict()
