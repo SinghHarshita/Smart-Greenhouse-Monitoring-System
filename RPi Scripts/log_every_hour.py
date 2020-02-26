@@ -2,7 +2,7 @@ import requests
 import json
 import datetime
 
-from my_url import server_url
+from my_url import server_url, is_connected
 
 from temperature import measure_temp
 from airQ_lightIntensity import check_air_light
@@ -30,11 +30,12 @@ def log_every_hour_main():
     result_dict['air_quality'] = air_light['air_quality']
 
     params['log_details'] = json.dumps(result_dict)
-    try:
-        r = requests.post(url = url, data = params, headers={"Authorization": "Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFiY0BnbWFpbC5jb20iLCJwYXNzd29yZCI6InBhc3N3b3JkIiwiZXhwaXJ5IjoiMjAyMC0wMS0zMSJ9.W_r0gs3YS6icdnqhwatbZVo3EB_aUwBKmQxrg7jU2YU"})
-        print("Logged Successfully....")
-    except:
-        print("Error in Logging")
+    if is_connected():
+        try:
+            r = requests.post(url = url, data = params, headers={"Authorization": "Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFiY0BnbWFpbC5jb20iLCJwYXNzd29yZCI6InBhc3N3b3JkIiwiZXhwaXJ5IjoiMjAyMC0wMS0zMSJ9.W_r0gs3YS6icdnqhwatbZVo3EB_aUwBKmQxrg7jU2YU"})
+            print("Logged Successfully....")
+        except:
+            print("Error in Logging")
     
     time.sleep(60*60)
     log_every_hour_main()

@@ -6,7 +6,7 @@ import time
 from lamp2 import light_On
 from lamp1 import light_Off
 
-from my_url import server_url
+from my_url import server_url, is_connected
 
 ser = serial.Serial('/dev/ttyACM0', 9600)
 
@@ -23,15 +23,17 @@ def main_light_Air():
     print("Request start")
     flag = 0
 
-    try:            
-        r = requests.post(url = url, data = params, headers={"Authorization": "Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFiY0BnbWFpbC5jb20iLCJwYXNzd29yZCI6InBhc3N3b3JkIiwiZXhwaXJ5IjoiMjAyMC0wMS0zMSJ9.W_r0gs3YS6icdnqhwatbZVo3EB_aUwBKmQxrg7jU2YU"})
+    if is_connected():
+        try:            
+            r = requests.post(url = url, data = params, headers={"Authorization": "Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFiY0BnbWFpbC5jb20iLCJwYXNzd29yZCI6InBhc3N3b3JkIiwiZXhwaXJ5IjoiMjAyMC0wMS0zMSJ9.W_r0gs3YS6icdnqhwatbZVo3EB_aUwBKmQxrg7jU2YU"})
 
-        crop_details = json.loads(r.text)
-        # print(crop_details)
-        flag = 1
-    except:
-        print("Error in parsing")
-        pass
+            crop_details = json.loads(r.text)
+            # print(crop_details)
+            flag = 1
+        except:
+            print("Error in parsing")
+            pass
+    crop_details = dict()
     return crop_details
 
 def measurelight_from_arduino():

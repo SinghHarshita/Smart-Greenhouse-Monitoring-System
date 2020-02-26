@@ -62,31 +62,31 @@ def ground_irrigate(server_url):
     url = server_url + "/getirrigationdetails"
     print("Request start")
     flag = 0
-    
-    try:
-        r = requests.post(url = url, data = params, headers={"Authorization": "Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFiY0BnbWFpbC5jb20iLCJwYXNzd29yZCI6InBhc3N3b3JkIiwiZXhwaXJ5IjoiMjAyMC0wMS0zMSJ9.W_r0gs3YS6icdnqhwatbZVo3EB_aUwBKmQxrg7jU2YU"})
-        print(r.text)
+    if is_connected():
+        try:
+            r = requests.post(url = url, data = params, headers={"Authorization": "Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFiY0BnbWFpbC5jb20iLCJwYXNzd29yZCI6InBhc3N3b3JkIiwiZXhwaXJ5IjoiMjAyMC0wMS0zMSJ9.W_r0gs3YS6icdnqhwatbZVo3EB_aUwBKmQxrg7jU2YU"})
+            print(r.text)
 
-        irrigation_details = json.loads(r.text)
-        print(irrigation_details)
-        flag = 1
-    except:
-        print("Error in parsing")
-        pass
-    #print(irrigation_details,type(irrigation_details))
+            irrigation_details = json.loads(r.text)
+            print(irrigation_details)
+            flag = 1
+        except:
+            print("Error in parsing")
+            pass
+        #print(irrigation_details,type(irrigation_details))
 
-    now = datetime.now()
-    cur_time = now.strftime("%Y-%m-%d %H:%M:%S")
-    if(flag == 1 and (irrigation_details['starttime']<cur_time and irrigation_details['endtime']>cur_time)):
-        print("Irrigation Starts")
-        while(irrigation_details['endtime']>cur_time):
-            now = datetime.now()
-            cur_time = now.strftime("%Y-%m-%d %H:%M:%S")
-            irrigate()
-        print("Irrigation ends")
-    else:
-        print("No irrigation")
-    print("Request Finish")
+        now = datetime.now()
+        cur_time = now.strftime("%Y-%m-%d %H:%M:%S")
+        if(flag == 1 and (irrigation_details['starttime']<cur_time and irrigation_details['endtime']>cur_time)):
+            print("Irrigation Starts")
+            while(irrigation_details['endtime']>cur_time):
+                now = datetime.now()
+                cur_time = now.strftime("%Y-%m-%d %H:%M:%S")
+                irrigate()
+            print("Irrigation ends")
+        else:
+            print("No irrigation")
+        print("Request Finish")
 
     time.sleep(60*60)
     main_irrigate(server_url)
