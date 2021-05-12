@@ -50,7 +50,7 @@
   "dependencies": {
     "availity-reactstrap-validation": "^2.0.4",
     "axios": "^0.18.0",
-    "chart.js": "^2.7.2",
+    "chart.js": "^2.9.4",
     "chartjs-plugin-datalabels": "^0.3.0",
     "classnames": "2.2.6",
     "draft-js": "^0.10.5",
