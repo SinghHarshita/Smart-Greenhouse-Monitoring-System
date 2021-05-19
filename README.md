@@ -1,4 +1,5 @@
 # Smart Greenhouse Monitoring System
+Treesponse is a smart greenhouse monitoring system. Smart greenhouse is a concept of greenhouse that cultivates crops without human intervention. Crops in a smart greenhouse grow without adjustment of climate or any human interference by any means for a particular period. The smart greenhouse uses various microprocessors and sensors to perform functions such as controlling temperature and irrigation system. Any type of plant, fruit, and vegetables can be grown at any time of year in a smart greenhouse. This system is cost effective and improves efficiency & versatility of greenhouses
 
 ## Problem Statement
 ### What is the problem?
